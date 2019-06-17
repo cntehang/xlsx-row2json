@@ -1,0 +1,25 @@
+{
+  "name": "xlsx-row2json",
+  "version": "1.0.0",
+  "description": "按行将 xlsx 解析为 json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chendye/xlsx-ts-json.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chendye/xlsx-ts-json/issues"
+  },
+  "homepage": "https://github.com/chendye/xlsx-ts-json#readme",
+  "devDependencies": {
+    "typescript": "^3.5.2"
+  },
+  "files": ["lib"]
+}
