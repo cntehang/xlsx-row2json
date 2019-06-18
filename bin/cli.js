@@ -27,11 +27,12 @@ function writeModels(src, dist) {
   const basePath = process.cwd()
   src = resolve(basePath, src)
   dist = resolve(basePath, dist)
+  logger.log('src ', src)
+  logger.log('dis', dist)
 
   const files = getXlsxFiles(src)
   const content = getModelContent(files)
-  logger.log('src ', src)
-  logger.log('dis', dist)
+
   writeFileSync(dist, content.join('\n'))
 }
 
@@ -39,7 +40,6 @@ function getModelContent(files) {
   const content = []
   files.forEach(file => {
     parse(file).forEach((val, name) => {
-      logger.log(val.colsInfo)
       const str = val.colsInfo
         .map(k => {
           return `  ${k.colKey}: ${k.dataType}`

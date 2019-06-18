@@ -48,7 +48,10 @@ function getCellValue(cell: CellObject, col: ColInfo): string | boolean {
     col.dataType === Type.Date ||
     col.dataType === Type.Time
   ) {
-    const date = getLocalDate(originalValue as number)
+    const date = getLocalDate(
+      originalValue as number,
+      col.dataType === Type.Time,
+    )
     const formats =
       col.dataType === Type.Time
         ? 'HH:mm'
@@ -57,7 +60,7 @@ function getCellValue(cell: CellObject, col: ColInfo): string | boolean {
         : 'YYYY-MM-DD HH:mm'
     value = dateFormat(date, formats)
   } else {
-    value = String(value)
+    value = String(originalValue)
   }
   return value
 }
@@ -97,7 +100,6 @@ function getGrouped(
 function getSheetInfo(workSheet: WorkSheet): SheetInfo {
   // 列信息
   const colsInfo = getColsInfo(workSheet)
-  console.log(colsInfo)
   // log("keys: ", cellInfos);
   // 行数
   const rowCount = getRowCount(workSheet)

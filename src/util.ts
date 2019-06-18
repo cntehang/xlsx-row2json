@@ -28,13 +28,20 @@ export function getTypeByColKey(colKey: string): Type {
  * @param {number} excelNum 以天为单位
  * @returns {Date}
  */
-export function getLocalDate(excelNum: number): Date {
+export function getLocalDate(excelNum: number, isTime = false): Date {
   // UTC 毫秒数
-  const baseDate = Date.UTC(1900, 0, -1)
-  const dateUTC = baseDate + excelNum * 24 * 60 * 60 * 1000
+  const today = new Date()
+  // TODO:待优化
+  const baseDate = isTime
+    ? Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate())
+    : Date.UTC(1900, 0, -1)
+
+  const dateUTC = Math.round(baseDate + excelNum * 24 * 60 * 60 * 1000)
+
   // 对应的本地毫秒数
   const tzOffset = new Date().getTimezoneOffset()
-  const utcAsLocal = dateUTC + tzOffset * 60 * 1000
+  const utcAsLocal = Math.round(dateUTC + tzOffset * 60 * 1000)
+
   return new Date(utcAsLocal)
 }
 /**

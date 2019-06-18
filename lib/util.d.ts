@@ -10,7 +10,7 @@ export declare function getTypeByColKey(colKey: string): Type;
  * @param {number} excelNum 以天为单位
  * @returns {Date}
  */
-export declare function getLocalDate(excelNum: number): Date;
+export declare function getLocalDate(excelNum: number, isTime?: boolean): Date;
 /**
  * To upper camel case 首字母转为大写
  * @param str
