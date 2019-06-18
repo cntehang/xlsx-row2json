@@ -6,7 +6,7 @@ const program = require('commander')
 const updateNotifier = require('update-notifier')
 const pkg = require('../package.json')
 
-const { parse } = require('../lib/index')
+const { parse, NAME_SUFFIX } = require('../lib/index')
 const { Logger, getXlsxFiles } = require('../lib/util')
 const logger = new Logger('xlsx2models')
 
@@ -45,7 +45,7 @@ function getModelContent(files) {
           return `  ${k.colKey}: ${k.dataType}`
         })
         .join('\n')
-      name = name + 'Case'
+      name = name + NAME_SUFFIX
       content.push(`export interface ${name} {\n${str}\n}\n`)
     })
   })

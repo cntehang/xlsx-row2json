@@ -2,7 +2,7 @@
   "name": "xlsx-row2json",
   "version": "1.0.0",
   "description": "按行将 xlsx 解析为 json",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "dev": "tsc -p tsconfig.json -w",

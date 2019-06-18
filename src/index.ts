@@ -20,12 +20,12 @@ export function parse(filePath: string): Map<string, SheetInfo> {
 
 const REG_GROUP_START = /!CASE_START/
 const REG_GROUP_END = /!CASE_END/
-const NAME_SUFFIX = 'Case'
+export const NAME_SUFFIX = 'Case'
 /**
  * 获取目录下 xlsx 文件的数据
  * @param dir 文件夹路径
  */
-export function getData(dir: string): Map<string, Row[] | Row[][]> {
+export function getCases(dir: string): Map<string, any> {
   const data = new Map()
   getXlsxFiles(dir).forEach(file => {
     parse(file).forEach((sheet, name) => {
