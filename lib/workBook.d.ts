@@ -1,5 +1,5 @@
-import { WorkBook } from "xlsx";
-import { SheetInfo } from "./model";
+import { WorkBook } from 'xlsx';
+import { SheetInfo } from './models';
 /**
  *
  * @param filename 文件名

@@ -1,7 +1,10 @@
 export interface SheetInfo {
     colsInfo: ColInfo[];
-    grouped: any[];
+    grouped: Row[];
     ungrouped: UngroupedCell[];
+}
+export interface Row {
+    [key: string]: string | boolean;
 }
 export interface UngroupedCell {
     cellName: string;
@@ -17,5 +20,7 @@ export declare enum Type {
     String = "string",
     Number = "number",
     Date = "Date",
+    Time = "Time",
+    DateTime = "DateTime",
     Error = "Error"
 }
