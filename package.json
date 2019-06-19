@@ -41,6 +41,7 @@
     "lib"
   ],
   "bin": {
-    "xlsx2models": "bin/cli.js"
+    "thXlsx": "bin/cli.js",
+    "the2e": "bin/e2e-cli.js"
   }
 }

@@ -14,7 +14,7 @@ updateNotifier({ pkg }).notify()
 
 program.version(pkg.version)
 program
-  .command('parse')
+  .command('models')
   // .alias("p")
   .description('从 xlsx 文件中解析出 interface')
   .option('-d, --dir [dirPath]', 'xlsx 目录')

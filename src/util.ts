@@ -52,6 +52,9 @@ export function getLocalDate(excelNum: number, isTime = false): Date {
 export function toUpperCamelCase(str: string): string {
   return str.replace(/^[a-z]/, f => f.toUpperCase())
 }
+export function toLowerCamelCase(str: string): string {
+  return str.replace(/^[A-Z]/, f => f.toLowerCase())
+}
 
 export function getXlsxFiles(dir: string) {
   const subDirs = readdirSync(dir)

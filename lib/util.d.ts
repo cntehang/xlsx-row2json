@@ -17,6 +17,7 @@ export declare function getLocalDate(excelNum: number, isTime?: boolean): Date;
  * @returns string
  */
 export declare function toUpperCamelCase(str: string): string;
+export declare function toLowerCamelCase(str: string): string;
 export declare function getXlsxFiles(dir: string): any[];
 export declare class Logger {
     private prefix;
