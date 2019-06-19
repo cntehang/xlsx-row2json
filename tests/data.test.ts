@@ -1,8 +1,8 @@
-import { parse, getData } from '../src/index'
+import { parse, getCases } from '../src/index'
 import { Type, SheetInfo } from '../src/models'
 
 const result = parse('./files/t.xlsx')
-const grouped = getData('./files')
+const grouped = getCases('./files')
 const sheet = result.get('T') as SheetInfo
 const groupedSheet = grouped.get('TCase')
 describe('check', function() {
