@@ -37,9 +37,6 @@
     "update-notifier": "^3.0.0",
     "xlsx": "^0.14.3"
   },
-  "files": [
-    "lib"
-  ],
   "bin": {
     "thXlsx": "./bin/cli.js",
     "the2e": "./bin/e2e-cli.js"
