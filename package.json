@@ -41,7 +41,7 @@
     "lib"
   ],
   "bin": {
-    "thXlsx": "bin/cli.js",
-    "the2e": "bin/e2e-cli.js"
+    "thXlsx": "./bin/cli.js",
+    "the2e": "./bin/e2e-cli.js"
   }
 }
