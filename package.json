@@ -35,7 +35,7 @@
     "commander": "^2.20.0",
     "date-fns": "^1.30.1",
     "update-notifier": "^3.0.0",
-    "xlsx": "^0.14.3"
+    "xlsx": "^0.17.0"
   },
   "bin": {
     "thXlsx": "./bin/cli.js",
